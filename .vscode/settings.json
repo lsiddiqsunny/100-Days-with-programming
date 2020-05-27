@@ -2,6 +2,10 @@
     "files.associations": {
         "utility": "cpp",
         "xstring": "cpp",
-        "deque": "cpp"
-    }
+        "deque": "cpp",
+        "stack": "cpp",
+        "cmath": "cpp",
+        "ostream": "cpp"
+    },
+    "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
 }
