@@ -5,7 +5,8 @@
         "deque": "cpp",
         "stack": "cpp",
         "cmath": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     },
     "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
 }
