@@ -1,77 +1,55 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define mx 500005
-
-vector<int> g[mx];
-int vis[mx];
-int solution[mx];
-int desier[mx];
-vector<int> ans;
-vector<pair<int, int>> a;
-int co;
-void dfs(int s, int now)
+vector<int> g[mx], container[mx];
+int topic[mx];
+set<int> neighbour[mx];
+int main()
 {
-    ans.push_back(s);
-    vis[s] = 1;
-    solution[s] = now;
-    for (int u : g[s])
-    {
-        if (vis[u] || desier[u]>=solution[u])
-        {
-            continue;
-        }
-        
-        dfs(u, now + 1);
-    }
-}
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-void solve()
-{
     int n, m;
     cin >> n >> m;
     for (int i = 0; i < m; i++)
     {
-        int x, y;
-        cin >> x >> y;
-        g[x].push_back(y);
-        g[y].push_back(x);
+        int u, v;
+        cin >> u >> v;
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        solution[i+1]=INT_MAX;
-        int x;
-        cin >> x;
-        desier[i + 1] = x;
-        a.push_back({x, i + 1});
+        cin >> topic[i];
+        container[topic[i]].push_back(i);
+        for (int u : g[i])
+            neighbour[u].insert(topic[i]);
     }
-    sort(a.begin(), a.end());
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        if (vis[a[i].second] == 0)
+        for (int u : container[i])
         {
-            dfs(a[i].second, a[i].first);
+            if (neighbour[u].count(topic[u]))
+            {
+                cout << "-1";
+                return 0;
+            }
+            for (int t = 1; t < topic[u]; t++)
+                if (neighbour[u].count(t) == 0)
+                {
+                    cout << "-1";
+                    return 0;
+                }
         }
     }
     for (int i = 1; i <= n; i++)
     {
-        if (desier[i] < solution[i])
+        for (int u : container[i])
         {
-            cout << -1 << endl;
-            return;
+            cout << u << " ";
         }
     }
-    for (int i = 0; i < n; i++)
-    {
-        cout << ans[i] << " ";
-    }
-}
-int main()
-{
-    int t;
-    t = 1;
-    while (t--)
-    {
-        solve();
-    }
+    return 0;
 }

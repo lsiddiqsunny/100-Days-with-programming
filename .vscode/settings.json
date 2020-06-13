@@ -6,7 +6,15 @@
         "stack": "cpp",
         "cmath": "cpp",
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "functional": "cpp",
+        "regex": "cpp",
+        "typeinfo": "cpp"
     },
     "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
 }
