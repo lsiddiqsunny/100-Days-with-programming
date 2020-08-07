@@ -14,7 +14,9 @@
         "sstream": "cpp",
         "functional": "cpp",
         "regex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "bitset": "cpp",
+        "set": "cpp"
     },
     "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
 }
