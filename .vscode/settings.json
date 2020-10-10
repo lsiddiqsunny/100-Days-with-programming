@@ -16,7 +16,9 @@
         "regex": "cpp",
         "typeinfo": "cpp",
         "bitset": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "string": "cpp"
     },
-    "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
+    "python.pythonPath": "C:\\Users\\test\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "C_Cpp.errorSquiggles": "Disabled"
 }
